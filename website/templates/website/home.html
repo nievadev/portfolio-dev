@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Martín Nieva</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+     
+    <link rel="stylesheet" href="{% static 'website/vendor/bootstrap/css/bootstrap.min.css' %}">
+     
+    <link rel="stylesheet" href="{% static 'website/vendor/font-awesome/css/font-awesome.min.css' %}">
+     
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic,700">
+     
+    <link rel="stylesheet" href="{% static 'website/vendor/lightbox2/css/lightbox.min.css' %}">
+     
+    <link rel="stylesheet" href="{% static 'website/css/style.default.css' %}" id="theme-stylesheet">
+     
+    <link rel="stylesheet" href="{% static 'website/css/custom.css' %}">
+     
+    <link rel="shortcut icon" href="{% static 'website/img/favicon2.png' %}">
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+  </head>
+  <body>
+    <section id="intro" style="background-image: url('{% static "website/img/ein-steig.jpg" %}');" class="intro">       
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="container clearfix">
+          <div class="row d-flex align-items: center;">
+            <div class="col-lg-8 col-md-12 mx-auto">
+              <p class="italic">Oh, hello, nice to meet you!</p>
+              <h1>Product builder. <br>Web developer. <br>Web designer. <br>That's me.</h1>
+              <p class="italic">I'm Martin Nieva.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+     
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container"><a href="#intro" class="navbar-brand link-scroll"><img style="height: 30px; " src="{% static 'website/img/mylogo.png' %}" alt="" class="img-fluid mb-3 mt-3 "></a>
+          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="#intro" class="nav-link link-scroll">Home</a></li>
+              <li class="nav-item"><a href="#about" class="nav-link link-scroll">About </a></li>
+              <li class="nav-item"><a href="#services" class="nav-link link-scroll">Services</a></li>
+              <li class="nav-item"><a href="#portfolio" class="nav-link link-scroll">Portfolio</a></li>
+              <li class="nav-item"><a href="#text" class="nav-link link-scroll">Technologies</a></li>
+              <li class="nav-item"><a href="#contact" class="nav-link link-scroll">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+     
+    <section id="about" class="text">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-3">
+            <h2 class="heading">About me</h2>
+            <p class="lead">I'm an experienced web developer.</p>
+            <p>I'm a freelancer developer who is constantly learning programming related technologies and developing his personal projects. As a hobby I maintain a little social network called <a class="text-info text-decoration-none" target="_blank" href="http://vicia2.herokuapp.com/">VICIA2!</a> with a friend of mine who is also a developer.</p>
+            <p>I help talented professional artists to take their careers to the next level and make them stand out in the internet by creating them fast, reliable, stable, well designed and programmed websites that work, basing exactly in what they want and need. </p>
+            <p>I also work part-time as a beauty consultant in the business of Mary Kay, one of the most sophisticated companies of make-up related products in the world; which means I often get in touch with a lot of people to give skin-care classes.</p>
+            <!--
+            <p>I'm a freelancer developer who is constantly learning programming related technologies and developing his personal projects. I love to give advice to new people who is getting into the world of the developing business and as a hobby I also maintain a little social network called <a href="#">VICIA2!</a> with a friend of mine who is also a developer.</p>
+            <p>I help talented professional artists to take their careers to the next level and make them stand out in the internet by creating them fast, reliable, stable, well designed and programmed websites that work, basing exactly in what they want and need. </p>
+            <p>I also work part-time as a beauty consultant in the business of Mary Kay, one of the most sophisticated companies of make-up related products in the world; which means I get in touch with a lot of people everyday to give skin-care classes.</p>
+            -->
+          </div>
+          <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end mx-auto">
+            <p><img src="{% static 'website/img/megithub.jpg' %}" alt="" class="align-self-center img-fluid rounded-circle"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+     
+    <section id="services" style="background-color: #eee">
+      <div class="container">
+        <div class="row services">
+          <div class="col-lg-12">
+            <h2 class="heading">Services</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="box">
+                  <div class="icon"><i class="fa fa-desktop"></i></div>
+                  <h5>Webdesign</h5>
+                  <p>I make professional looking designs. Animations, responsiveness, all included!</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <div class="icon"><i class="fa fa-print"></i></div>
+                  <h5>Webdevelop</h5>
+                  <p>I'm not only a designer, but a programmer as well! That's what makes me a Full Stack developer. I make both the back-end and front-end, I build APIs with Django REST Framework.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="box">
+                  <div class="icon"><i class="fa fa-globe"></i></div>
+                  <h5>SEO</h5>
+                  <p>I can also increase the quality and quantity of the website's traffic by optimizing it and doing the best practices out there.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+    
+     
+    <section id="portfolio" class="gallery">
+      <div class="container clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-12 col-lg-8">
+                <h4 class="heading">Enough talking! <br>Here's some of my work</h4>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-around">
+              <div class="align-items-center justify-content-center d-flex col-md-4">
+                <img style="height: 80px; " src="{% static 'website/img/ruthmk.png' %}" alt="Ruth MK" class="img-responsive mb-5 filter-negative">
+              </div>
+              <div class="col-lg-6">
+                <h5>there was a time when i met one of the best beauty consultants of argentina, <a class="text-info text-decoration-none" target="_blank" href="https://www.marykay.com.ar/locator.search/contactme.aspx?c=mtawmtq0otixmdq%3d-6izwznse%2fa8%3d&d=1111907664">ruth fernández</a>.</h5> 
+                <p>Ruth had a <span class="font-weight-bold">problem</span>: it was hard for the clients to reach her and tell her exactly what they wanted, because they didn't know the products Mary Kay has to offer in the first place. <br>So, I offered her a <span class="font-weight-bold">solution</span>: develop her a website which will simplify the way consultants and clients get in touch. You get in, select what you want, see the promos, and just get in touch with Ruth! Easy!</p>
+                <a class="hvr-bounce-to-right btn float-right mb-5 border-dark" target="_blank" href="http://ruthmk.herokuapp.com/">Go to app</a>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-around">
+              <div class="align-items-center justify-content-center d-flex col-lg-4">
+                <img style="height: 130px; " src="{% static 'website/img/vicia2.png' %}" alt="VICIA2!" class="mb-5">
+              </div>
+              <div class="col-lg-6">
+                <h5>as a hobby, my friend and I made a little social network we still maintain till this day.</h5> 
+                <p>Three years ago, one good friend of mine and I had a really nice idea: <br><span class="font-weight-bold">we are bored as hell, so why not to make a social network?</span>
+                <br>So, that's what we did! It was complicated and hard as first, because we had got to organize our times and learn some technologies to make our idea come true. 
+                <br>But, three years ago, we are proud to say: <span class="font-weight-bold">it's finished!</span>
+                <br>We had a bit of traffic at first, but then nothing special. We didn't make it big because we had to do our own things, but we had fun and learned a LOT!
+                <br><span class="text-muted">(by the way, we didn't make a mobile version yet)</span></p>
+                <a class="hvr-bounce-to-right btn float-right mb-5 border-dark" target="_blank" href="http://vicia2.herokuapp.com/">Go to app</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+     
+    <section id="text" class="text-page section-inverse">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h4 class="heading">My technologies</h4>
+            <div class="tech-container">
+              <div class="tech d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="img-responsive-tech align-self-center mb-3" src="{% static 'website/img/angular.png' %}" alt="">
+                <h5 class="mb-5">Angular 2+</h5>
+              </div>
+              <div class="tech d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="img-responsive-tech align-self-center mb-3 rounded-circle" src="{% static 'website/img/django.jpg' %}" alt="">
+                <h5 class="mb-5">Django</h5>
+              </div>
+              <div class="tech d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="img-responsive-tech align-self-center mb-3 filter-negative" src="{% static 'website/img/djangorest.png' %}" alt="">
+                <h5 class="mb-5">Django REST</h5>
+              </div>
+              <div class="tech d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="img-responsive-tech align-self-center mb-3" src="{% static 'website/img/bootstrap.png' %}" alt="">
+                <h5 class="mb-5">Bootstrap</h5>
+              </div>
+              <div class="tech d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="img-responsive-tech align-self-center mb-3" src="{% static 'website/img/jekyll.png' %}" alt="">
+                <h5 class="mb-5">Jekyll</h5>
+              </div>
+              <div class="tech d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="img-responsive-tech align-self-center mb-3 rounded-circle" src="{% static 'website/img/nodejs.png' %}" alt="">
+                <h5 class="mb-5">Node.js</h5>
+              </div>
+              <div class="tech d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="img-responsive-tech rounded-circle align-self-center mb-3" src="{% static 'website/img/express.png' %}">
+                <h5 class="mb-5">Express</h5>
+              </div>
+              <div class="tech d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="img-responsive-tech align-self-center mb-3" src="{% static 'website/img/jquery.png' %}" alt="">
+                <h5 class="mb-5">jQuery</h5>
+              </div>
+            </div>
+            <!--
+            <div class="row">
+              <div class="col-lg-3 d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="mb-3" src="img/angular.png" alt="">
+                <h5 class="mb-5">Angular 2+</h5>
+              </div>
+              <div class="col-lg-3 d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="mb-3 rounded-circle" src="img/django.jpg" alt="">
+                <h5 class="mb-5">Django</h5>
+              </div>
+              <div class="col-lg-3 d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="mb-3 filter-negative" src="img/djangorest.png" alt="">
+                <h5 class="mb-5">Django REST</h5>
+              </div>
+              <div class="col-lg-3 d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="mb-3" src="img/bootstrap.png" alt="">
+                <h5 class="mb-5">Bootstrap</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="mb-3" src="img/jekyll.png" alt="">
+                <h5 class="mb-5">Jekyll</h5>
+              </div>
+              <div class="col-lg-3 d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="mb-3 rounded-circle" src="img/nodejs.png" alt="">
+                <h5 class="mb-5">Node.js</h5>
+              </div>
+              <div class="col-lg-3 d-flex flex-column align-items-center">
+                <p style="font-size: 73.35px;" class="mb-3" src="img/express.png">E</p>
+                <h5 class="mb-5">Express</h5>
+              </div>
+              <div class="col-lg-3 d-flex flex-column align-items-center">
+                <img style="height: 110px;" class="mb-3" src="img/jquery.png" alt="">
+                <h5 class="mb-5">jQuery</h5>
+              </div>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </section>
+     
+     
+    <section id="contact" style="background-color: #fff;" class="text-page pb-4"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="heading">Contact</h2>
+            <div class="row">
+              <div class="col-lg-6">
+                <form id="contact-form" method="post" action="" class="contact-form">
+                  {% csrf_token %}
+                  <div class="controls">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="name">Your firstname *</label>
+                          <input type="text" name="name" placeholder="Enter your firstname" required="required" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="surname">Your lastname *</label>
+                          <input type="text" name="surname" placeholder="Enter your  lastname" required="required" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="surname">Your email *</label>
+                      <input type="email" name="email" placeholder="Enter your  email" required="required" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="surname">Your message for me *</label>
+                      <textarea rows="4" name="message" placeholder="Enter your message" required="required" class="form-control"></textarea>
+                    </div>
+                    <div class="text-center">
+                      <!-- <input type="submit" name="name" value="Send message" class="btn btn-outline-primary btn-block"> -->
+                      <button class="btn hvr-bounce-to-right border-dark" type="submit">Send message</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg-6">
+                <h5>Feel free to contact me if you desire my services</h5>
+                <p class="mb-4">Here you can complete this form and an email will be sent to me right away!
+                <br>I will contact you in less than 72 hours. I have a lot of work and a really busy agenda, so please make it brief if is not a job offer!</p>
+                <h5 class="text-center">my socials</h5>
+                <p class="social"><a href="https://www.facebook.com/profile.php?id=100007717451852" title="My Facebook" class="facebook"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/MartnNieva1" title="My Twitter" class="twitter"><i class="fa fa-twitter"></i></a><a href="https://www.instagram.com/martinnievaa/" title="My Instagram" class="instagram"><i class="fa fa-instagram"></i></a><a href="mailto:martinjafactor@gmail.com" title="My Email" class="email"><i class="fa fa-envelope"></i></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer style="background-color: #111;">
+      <div class="container"> 
+        <div class="row copyright">
+          <div class="col-md-6">
+            <p class="mb-md-0 text-center text-md-left">&copy;2018 Martín Nieva</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+     
+    <script src="{% static 'website/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'website/vendor/jquery.cookie/jquery.cookie.js' %}"> </script>
+    <script src="{% static 'website/vendor/lightbox2/js/lightbox.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"> </script>
+    <script src="{% static 'website/js/front.js' %}"></script>
+  </body>
+</html>
